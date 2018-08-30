@@ -36,7 +36,7 @@ class Database:
                 INNER JOIN error_count_by_date ON \
                 connection_count_by_date.date_trunc \
                     = error_count_by_date.date_trunc \
-                where ((error_count_by_date.count + .0) / \
+                WHERE ((error_count_by_date.count + .0) / \
                 connection_count_by_date.count) * 100 > 1 \
                 ORDER BY error_rate DESC;")
         ]
