@@ -1,4 +1,4 @@
-> # Log Analysis Project
+> # Logs Analysis Project
 
 # Description
 - This code uses Python 2
@@ -35,7 +35,7 @@
         FROM (
             SELECT * FROM log WHERE cast(substring(status,1,3) as int) >= 400
         ) AS error 
-        GROPUP BY date_trunc('day',time);
+        GROUP BY date_trunc('day',time);
     ```
 
 - `python project.py`
